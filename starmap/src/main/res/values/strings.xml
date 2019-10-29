@@ -1,0 +1,12 @@
+<resources>
+    <string-array name="startmap_location_msg">
+        <item>GPS定位成功</item>
+        <item>无法获取有效定位依据，请检查运营商网络或者WiFi网络是否正常开启，尝试重新请求定位</item>
+        <item>没有成功向服务器发起请求，请确认当前测试手机网络是否通畅，尝试重新请求定位</item>
+        <item>通过requestOfflineLocaiton调用时对应的返回结果</item>
+        <item>网络定位成功</item>
+        <item>一般是由于客户端SO文件加载失败造成，请严格参照开发指南或demo开发，放入对应SO文件</item>
+        <item>请您检查是否禁用获取位置信息权限，尝试重新请求定位</item>
+        <item>请按照说明文档重新申请AK</item>
+    </string-array>
+</resources>
