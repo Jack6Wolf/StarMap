@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.Jack6Wolf'
 android {
     compileSdkVersion 28
     buildToolsVersion "29.0.0"
@@ -37,25 +39,25 @@ dependencies {
 }
 
 //////// 打包发布配置开始 ////////
-apply plugin: 'maven'
-ext {
-    // 从Github上clone下来的项目的本地地址
-    GITHUB_REPO_PATH = "C:\\map-sdk\\StarMapSDK"
-    PUBLISH_GROUP_ID = 'com.startimes.map'
-    PUBLISH_ARTIFACT_ID = 'MapLib'
-    PUBLISH_VERSION = '1.3'
-}
-uploadArchives {
-    repositories.mavenDeployer {
-        def deployPath = file(project.GITHUB_REPO_PATH)
-        repository(url: "file://${deployPath.absolutePath}")
-        pom.project {
-            groupId project.PUBLISH_GROUP_ID
-            artifactId project.PUBLISH_ARTIFACT_ID
-            version project.PUBLISH_VERSION
-        }
-    }
-}
+//apply plugin: 'maven'
+//ext {
+//    // 从Github上clone下来的项目的本地地址
+//    GITHUB_REPO_PATH = "C:\\map-sdk\\StarMapSDK"
+//    PUBLISH_GROUP_ID = 'com.startimes.map'
+//    PUBLISH_ARTIFACT_ID = 'MapLib'
+//    PUBLISH_VERSION = '1.3'
+//}
+//uploadArchives {
+//    repositories.mavenDeployer {
+//        def deployPath = file(project.GITHUB_REPO_PATH)
+//        repository(url: "file://${deployPath.absolutePath}")
+//        pom.project {
+//            groupId project.PUBLISH_GROUP_ID
+//            artifactId project.PUBLISH_ARTIFACT_ID
+//            version project.PUBLISH_VERSION
+//        }
+//    }
+//}
 
 // 源代码一起打包
 //task androidSourcesJar(type: Jar) {
